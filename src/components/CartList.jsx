@@ -1,13 +1,10 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
 import { CartItem } from "./CartItem.jsx";
 
-function CartList(props) {
-  const {
-    order = [],
-    handleCartShow = Function.prototype,
-    removeFromCart = Function.prototype,
-    incQuantuty = Function.prototype,
-    decQuantuty = Function.prototype,
-  } = props;
+function CartList() {
+  const { order = [], handleCartShow = Function.prototype } =
+    useContext(ShopContext);
   const totalPice = order.reduce((sum, elem) => {
     return sum + elem.price.regularPrice * elem.quantity;
   }, 0);
@@ -17,15 +14,7 @@ function CartList(props) {
         Корзина
       </li>
       {order.length ? (
-        order.map((item) => (
-          <CartItem
-            key={item.mainId}
-            {...item}
-            removeFromCart={removeFromCart}
-            incQuantuty={incQuantuty}
-            decQuantuty={decQuantuty}
-          />
-        ))
+        order.map((item) => <CartItem key={item.mainId} {...item} />)
       ) : (
         <li href="#!" className="collection-item ">
           Корзина пуста

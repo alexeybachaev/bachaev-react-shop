@@ -1,13 +1,11 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
 function CartItem(props) {
-  const {
-    mainId,
-    displayName,
-    price,
-    quantity,
-    removeFromCart = Function.prototype,
-    incQuantuty = Function.prototype,
-    decQuantuty = Function.prototype,
-  } = props;
+  const { mainId, displayName, price, quantity } = props;
+
+  const { removeFromCart, incQuantuty, decQuantuty } = useContext(ShopContext);
+
   return (
     <li href="#!" className="collection-item ">
       {displayName}{" "}

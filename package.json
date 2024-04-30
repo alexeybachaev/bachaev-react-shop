@@ -1,5 +1,6 @@
 {
   "name": "bachaev-react-shop",
+  "homepage": "https://alexeybachaev.github.io/bachaev-react-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
