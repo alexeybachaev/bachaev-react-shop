@@ -1,3 +1,3 @@
 # Getting Started with Create React App
 
-[DEMO](https://alexeybachaev.github.io/ozon-test/)
+[DEMO](https://alexeybachaev.github.io/bachaev-react-shop/)
